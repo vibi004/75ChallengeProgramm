@@ -1,0 +1,83 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(145deg, #ffe6f0, #e6f7ff);
+    min-height: 100vh;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #ff66cc, #66ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-pink {
+    background-color: #ff99cc !important;
+}
+
+#challengeModal {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;   /* Vertikale Mitte */
+    justify-content: center; /* Horizontale Mitte */
+}
+
+/* Inhalt im Modal */
+#challengeModal .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#challengeModal .modal-content {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: scale(1);
+    opacity: 1;
+}
+
+#challengeModal.hidden .modal-content {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+#challengeList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.challenge-item {
+    background: #fff0f6;
+    border: 1px solid #f3c6d4;
+    border-radius: 8px;
+    padding: 8px 12px;
+    min-width: 130px;
+    max-width: 170px;
+    text-align: center;
+    font-weight: 500;
+    color: #a63d63; /* gedecktes, warmes Dunkelpink */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    box-shadow: 0 1px 3px rgba(166, 61, 99, 0.15);
+    user-select: none;
+    transition: box-shadow 0.25s ease;
+    cursor: default;
+}
+
+.challenge-item:hover {
+    box-shadow: 0 4px 12px rgba(166, 61, 99, 0.3);
+}

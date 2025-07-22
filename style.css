@@ -1,0 +1,84 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.bg-gradient {
+    background: violet;
+}
+
+.girly-card {
+    background: #fffaf6;
+    border-radius: 20px;
+    max-width: 360px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(138, 103, 142, 0.15);
+    padding: 30px 35px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.girly-card:hover {
+    box-shadow: 0 8px 25px rgba(138, 103, 142, 0.3);
+}
+
+.text-pink {
+    color: #a96ca0; /* Lavendel-Pink */
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-family: 'Segoe Script', cursive;
+    letter-spacing: 0.03em;
+}
+
+.girly-input {
+    border: 1.8px solid #d4a5d6; /* zartes Lila */
+    border-radius: 12px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4a3f55;
+    background-color: #fffaf6;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.girly-input::placeholder {
+    color: #cbb5d8;
+}
+
+.girly-input:focus {
+    outline: none;
+    border-color: #a96ca0;
+    box-shadow: 0 0 8px #d4a5d6aa;
+    background-color: #fff6fb;
+}
+
+.btn-pink {
+    background-color: #a96ca0;
+    color: #fffaf6;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 12px 0;
+    font-size: 1.15rem;
+    border: none;
+    box-shadow: 0 4px 8px #cbb5d8aa;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    letter-spacing: 0.04em;
+}
+
+.btn-pink:hover {
+    background-color: #bf88bf;
+    box-shadow: 0 6px 14px #d4a5d6cc;
+    cursor: pointer;
+}
+
+#login-error {
+    font-weight: 600;
+    font-size: 1rem;
+    min-height: 1.2rem;
+    margin-top: 18px;
+    color: #b95f9d;
+    user-select: none;
+}
+
