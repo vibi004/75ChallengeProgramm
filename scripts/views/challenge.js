@@ -27,7 +27,7 @@ async function init() {
 
         const users = await getAllUsers()
         if (!users) return
-        renderUserAvatars(users)
+        await renderUserAvatars(users)
 
         const currentUser = await getUserByName(currentUserName)
         if (!currentUser) return
@@ -80,7 +80,7 @@ export async function renderUserAvatars(users) {
     // HTML rendern
     avatarContainer.innerHTML = usersWithPoints.map(user => `
     <div class="text-center mx-2 my-3" style="min-width: 120px;">
-        <img id="${user.name}AvatarFoto" src="../../assets/avatars/${user.name}.png" alt="${user.name}"
+        <img id="${user.name}AvatarFoto" src="../assets/avatars/${user.name}.png" alt="${user.name}"
              class="rounded-circle mb-2 img-fluid" style="max-width: 100px;" />
         <div class="fw-semibold">${user.name}</div>
         <div><strong>${user.points}</strong> Punkte</div>
