@@ -57,8 +57,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         cells.push(...challengeCells);
 
         row.innerHTML = cells.join('');
+
+        // Heute markieren
+        const todayISO = new Date().toISOString().split('T')[0];
+        if (dayISO === todayISO) {
+            row.classList.add('highlight-today');
+        }
+
         tableBody.appendChild(row);
     }
+
 
 
 })
