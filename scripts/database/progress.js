@@ -94,3 +94,20 @@ export async function checkIfAllChecked(user_id){
     let count = await getProgressByUserForTodayLength(user_id);
     return count === (await getPreference()).number_challenges;
 }
+
+export async function isChallengeChecked(user_id, challenge_id, day_id) {
+    const { data, error } = await supabase
+        .from('Progress')
+        .select('*')
+        .eq('user_id', user_id)
+        .eq('day_id', day_id)
+        .eq('challenge_id', challenge_id)
+        .eq('completed', true);
+
+    if (error) {
+        console.error('Fehler beim Laden des Progress:', error);
+        return false;
+    }
+
+    return data.length > 0;
+}

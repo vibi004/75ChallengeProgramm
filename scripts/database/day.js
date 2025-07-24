@@ -16,3 +16,32 @@ export async function getTodayDayId() {
 
     return data?.id || null
 }
+
+export async function getAllDays() {
+    const { data, error } = await supabase
+        .from('Date')
+        .select('*')
+
+    if (error) {
+        console.error('Fehler beim Laden des Tages:', error.message)
+        return null
+    }
+
+    return data
+}
+
+
+export async function getDayByDate(dateString) {
+    const { data, error } = await supabase
+        .from('Days')
+        .select('*')
+        .eq('date', dateString)
+        .single()
+
+    if (error) {
+        console.error('Fehler beim Laden des Tages:', error)
+        return null
+    }
+
+    return data
+}
